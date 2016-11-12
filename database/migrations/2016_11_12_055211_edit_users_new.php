@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class EditProductsTable extends Migration
+class EditUsersNew extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class EditProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->string('sku');
-        });        
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -24,6 +24,8 @@ class EditProductsTable extends Migration
      */
     public function down()
     {
-        $table->dropColumn('sku');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

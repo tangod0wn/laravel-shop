@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class EditMessagesTable extends Migration
+class EditOrders extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,10 @@ class EditMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::table('messages', function (Blueprint $table) {
-            $table->boolean('read');
-        });
+        Schema::table('orders', function (Blueprint $table) {
+            //
+                $table->string('order_no');
+            });
     }
 
     /**
@@ -24,6 +25,8 @@ class EditMessagesTable extends Migration
      */
     public function down()
     {
-        $table->dropColumn('read');
+        Schema::table('orders', function (Blueprint $table) {
+            //
+        });
     }
 }
